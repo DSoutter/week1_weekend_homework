@@ -10,7 +10,8 @@ def get_total_cash(cash_total):
 # cash should equal the pet shop total plus 10
 
 def add_or_remove_cash(cash_total, extra):
-    if extra >= 0:
-        cash_total["admin"]["total_cash"]+=extra
-    else:
-        cash_total["admin"]["total_cash"]-=extra
+    cash_total["admin"]["total_cash"]+=extra
+
+
+def get_pets_sold(pets_sold):
+    return pets_sold["admin"]["pets_sold"]
