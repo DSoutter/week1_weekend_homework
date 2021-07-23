@@ -15,3 +15,9 @@ def add_or_remove_cash(cash_total, extra):
 
 def get_pets_sold(pets_sold):
     return pets_sold["admin"]["pets_sold"]
+
+def increase_pets_sold(current_sold, just_sold):
+    current_sold["admin"]["pets_sold"]+= just_sold
+
+def get_stock_count(stock):
+    return len(stock["pets"])
