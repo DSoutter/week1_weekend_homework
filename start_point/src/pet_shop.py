@@ -48,14 +48,16 @@ def remove_pet_by_name(pet_shop, dog_name):
     dog_dict = find_pet_by_name(pet_shop,dog_name)
     if dog_dict["name"] == dog_name:
         pet_shop["pets"].remove(dog_dict)
-          #find_pet_by_name(pet_shop,dog_name["name"]).remove()
-        #pet_shop["pets"].remove(to_be_removed)
-    
-    
-    
-    
-    #working
+        
+    # slower way of doing above:
     #  for pet in pet_shop["pets"]:
     #     if pet["name"] == dog_name:
     #         print(pet)
     #         pet_shop["pets"].remove(pet)
+
+def add_pet_to_stock(pet_shop, new_pet):
+    pet_shop["pets"].append(new_pet)
+
+def get_customer_cash(cust_cash):
+    return cust_cash["cash"]
+
