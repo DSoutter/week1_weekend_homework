@@ -21,3 +21,23 @@ def increase_pets_sold(current_sold, just_sold):
 
 def get_stock_count(stock):
     return len(stock["pets"])
+
+#I want to count all the British Shorthairds (dog_breed)
+#create a list to add them to it and loop through
+
+
+def get_pets_by_breed(pet_shop, dog_breed):
+    list_of_dog_breed = []
+    for breed in pet_shop["pets"]:
+        if breed["breed"] == dog_breed:       
+            list_of_dog_breed.append(dog_breed)
+    return list_of_dog_breed
+
+#the answer needs to be a key as "Arthur" = pet["name"]
+# it needs to be pet_shop = ["pets"][3]
+
+def find_pet_by_name(pet_shop, dog_name):
+    for pet in pet_shop["pets"]:
+        if pet["name"] == dog_name:
+            return pet
+
