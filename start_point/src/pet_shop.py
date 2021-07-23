@@ -41,3 +41,21 @@ def find_pet_by_name(pet_shop, dog_name):
         if pet["name"] == dog_name:
             return pet
 
+#a function to remove arthur from the list if it exists
+#the above function
+
+def remove_pet_by_name(pet_shop, dog_name):
+    dog_dict = find_pet_by_name(pet_shop,dog_name)
+    if dog_dict["name"] == dog_name:
+        pet_shop["pets"].remove(dog_dict)
+          #find_pet_by_name(pet_shop,dog_name["name"]).remove()
+        #pet_shop["pets"].remove(to_be_removed)
+    
+    
+    
+    
+    #working
+    #  for pet in pet_shop["pets"]:
+    #     if pet["name"] == dog_name:
+    #         print(pet)
+    #         pet_shop["pets"].remove(pet)
