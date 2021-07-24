@@ -81,3 +81,18 @@ def customer_can_afford_pet(cust, new_pet):
     else:
         return False
 
+#need to add 1 to cust pet count
+#need to add 1 to pets sold
+#need to remove cost of pet from cust cash
+#need to add cash to pet shop account
+
+def sell_pet_to_customer(pet_shop, new_pet, cust):
+    if cust["cash"] < new_pet["price"] or new_pet in cust["pets"]:
+        return "Cannot make sale"
+    else:
+        cust["pets"].append(new_pet)
+        increase_pets_sold(pet_shop, 1)
+        cust["cash"]-= new_pet["price"]
+        pet_shop["admin"]["total_cash"]+= new_pet["price"]
+
+        
