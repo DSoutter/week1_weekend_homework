@@ -40,6 +40,8 @@ def find_pet_by_name(pet_shop, dog_name):
     for pet in pet_shop["pets"]:
         if pet["name"] == dog_name:
             return pet
+        #else:
+         #   dog_name = None
 
 #a function to remove arthur from the list if it exists
 #the above function
@@ -87,12 +89,14 @@ def customer_can_afford_pet(cust, new_pet):
 #need to add cash to pet shop account
 
 def sell_pet_to_customer(pet_shop, new_pet, cust):
-    if cust["cash"] < new_pet["price"] or new_pet in cust["pets"]:
-        return "Cannot make sale"
+    if new_pet == None or cust["cash"] < new_pet["price"] or new_pet in cust["pets"]:
+        return None
     else:
         cust["pets"].append(new_pet)
         increase_pets_sold(pet_shop, 1)
         cust["cash"]-= new_pet["price"]
         pet_shop["admin"]["total_cash"]+= new_pet["price"]
 
-        
+# for second last question, I need to make it not run the else statement
+# this is due to "Dave" the pet not existing
+# try and get it to skip if         
